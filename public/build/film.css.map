@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "film.css",
+  "sources": [
+    "../../link.svelte",
+    "../../index.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  export let href;\n  export let text;\n</script>\n\n<style>\n  .link {\n    width: min-content;\n    padding: 1em;\n    text-decoration: none;\n    background-color: var(--dark);\n    color: var(--light);\n    margin-top: 1em;\n  }\n\n  .link:hover {\n    background-color: var(--grey);\n    text-decoration: underline;\n  }\n</style>\n\n<a class=\"link\" href={href}>{text}</a>\n",
+    "<script>\n  import { about } from \"images\";\n  import Link from \"components/link.svelte\";\n</script>\n\n<style>\n  .info {\n    padding: 0% 5%;\n    width: 45vw;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .main-image {\n    height: 100%;\n    width: 35vw;\n  }\n\n  .main-image img {\n    height: auto;\n    width: auto;\n    max-width: 100%;\n    max-height: 100%;\n    display: block;\n    margin-bottom: 1em;\n  }\n\n  @media (max-width: 600px) and (orientation: portrait) {\n    .main-image,\n    .info {\n      width: 80vw;\n    }\n  }\n</style>\n\n<div class=\"main-image\">\n  <img width=\"2500\" height=\"3125\" src={about.ines} alt=\"Inés Lozano Palacio\" />\n</div>\n<div class=\"info\">\n  <h1>FILM PAGE</h1>\n  <Link href=\"mailto:ines.lozano.palacio@gmail.com\" text=\"Contact\" />\n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AAME,KAAK,cAAC,CAAC,AACL,KAAK,CAAE,WAAW,CAClB,OAAO,CAAE,GAAG,CACZ,eAAe,CAAE,IAAI,CACrB,gBAAgB,CAAE,IAAI,MAAM,CAAC,CAC7B,KAAK,CAAE,IAAI,OAAO,CAAC,CACnB,UAAU,CAAE,GAAG,AACjB,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,gBAAgB,CAAE,IAAI,MAAM,CAAC,CAC7B,eAAe,CAAE,SAAS,AAC5B,CAAC;ACZD,KAAK,8BAAC,CAAC,AACL,OAAO,CAAE,EAAE,CAAC,EAAE,CACd,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,AACxB,CAAC,AAED,WAAW,8BAAC,CAAC,AACX,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,AACb,CAAC,AAED,0BAAW,CAAC,GAAG,eAAC,CAAC,AACf,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,KAAK,CACd,aAAa,CAAE,GAAG,AACpB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,CAAC,GAAG,CAAC,cAAc,QAAQ,CAAC,AAAC,CAAC,AACrD,yCAAW,CACX,KAAK,8BAAC,CAAC,AACL,KAAK,CAAE,IAAI,AACb,CAAC,AACH,CAAC"
+}
