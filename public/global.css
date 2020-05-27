@@ -1,0 +1,77 @@
+@font-face {
+  font-family: proxima-nova;
+  src: url(Proxima\ Nova\ Font.otf)
+}
+
+:root {
+  --dark: #2E2E2E;
+  --light: #FAFAFF;
+  --grey: rgb(114, 114, 114);
+  --pink: #E2B4BD;
+  --blue: #93A8AC;
+}
+
+body {
+  margin: 0;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-direction: row;
+  font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  color: var(--dark);
+  font-weight: 800;
+}
+
+p {
+  color: var(--grey);
+  line-height: 1.4em;
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid var(--grey);
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: var(--grey);
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+button {
+	color: var(--dark);
+	background-color: var(--light);
+	outline: none;
+}
+
+button:disabled {
+	color: var(--grey);
+}
+
+button:not(:disabled):active {
+	background-color: var(--grey);
+}
+
+button:focus {
+	border-color: var(--grey);
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  body {
+    flex-direction: column;
+    padding-top: 5vh;
+  }
+}
